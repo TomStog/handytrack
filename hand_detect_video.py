@@ -3,6 +3,7 @@ import mediapipe as mp
 
 mp_hands = mp.solutions.hands
 mp_drawing = mp.solutions.drawing_utils
+mp_myhand = mp_hands.Hands(max_num_hands=1, min_detection_confidence=0.5, min_tracking_confidence=0.5)
 
 video = cv2.VideoCapture('video.mp4')
 
@@ -13,7 +14,7 @@ while video.isOpened():
         break
 
     img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)	
-    results = mp_hands.Hands(max_num_hands=1, min_detection_confidence=0.5, min_tracking_confidence=0.5).process(img)
+    results = mp_myhand.process(img)
 
     img = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
 
