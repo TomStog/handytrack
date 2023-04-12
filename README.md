@@ -4,4 +4,6 @@ HandyTrack is a Python-based system for real-time hand detection and tracking us
 
 ![captured_image](https://user-images.githubusercontent.com/82231949/231422994-76125eb6-5060-457d-9247-155a457ee84d.jpg)
 
-![Test](https://www.dropbox.com/s/jgea4f7lnhlq823/output.mp4?dl=0)
+
+https://user-images.githubusercontent.com/82231949/231429246-d4cd9295-8118-41bd-9d3d-fb08112fbeeb.mp4
+
