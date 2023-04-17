@@ -33,7 +33,7 @@ while video.isOpened():
                     y_max = y
                 mp_drawing.draw_landmarks(img, hand_landmarks, mp_hands.HAND_CONNECTIONS)
 
-        cv2.rectangle(img, (x_min, y_min), (x_max, y_max), (0, 255, 0), 2)
+            cv2.rectangle(img, (x_min, y_min), (x_max, y_max), (0, 255, 0), 2)
 
     cv2.imshow('Hand Tracking', cv2.resize(img, (0,0), fx=0.25, fy=0.25))
     if cv2.waitKey(1) & 0xFF == ord('q'):
