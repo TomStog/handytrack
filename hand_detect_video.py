@@ -3,7 +3,7 @@ import mediapipe as mp
 
 mp_hands = mp.solutions.hands
 mp_drawing = mp.solutions.drawing_utils
-mp_myhand = mp_hands.Hands(max_num_hands=1, min_detection_confidence=0.5, min_tracking_confidence=0.5)
+mp_myhand = mp_hands.Hands(max_num_hands=2, min_detection_confidence=0.5, min_tracking_confidence=0.5)
 
 video = cv2.VideoCapture('video.mp4')
 
@@ -18,9 +18,9 @@ while video.isOpened():
 
     img = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
 
-    x_min, x_max, y_min, y_max = float('inf'), 0, float('inf'), 0
     if results.multi_hand_landmarks:
         for hand_landmarks in results.multi_hand_landmarks:
+            x_min, x_max, y_min, y_max = float('inf'), 0, float('inf'), 0
             for landmark in hand_landmarks.landmark:
                 x, y = int(landmark.x * img.shape[1]), int(landmark.y * img.shape[0])
                 if x < x_min:
