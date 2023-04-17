@@ -12,7 +12,7 @@ video = cv2.VideoCapture('video.mp4')
 success, img = video.read()
 
 img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)	
-results = mp_hands.Hands(max_num_hands=1, min_detection_confidence=0.5, min_tracking_confidence=0.5).process(img)
+results = mp_hands.Hands(max_num_hands=2, min_detection_confidence=0.5, min_tracking_confidence=0.5).process(img)
 
 img = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
 
